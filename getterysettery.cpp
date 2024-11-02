@@ -14,34 +14,34 @@ private:
 
 public:
     // Konstruktor klasy Samochod
-    Car(string marka, string model, int predkosc) : marka(b), model(m), maxpredkosc(predkosc) {}
+    Samochod(string ma, string mo, int predkosc) : marka(ma), model(mo), maxpredkosc(predkosc) {}
 
-    // Getter dla pola 'marka'
+    // Getter dla pola marka
     string PokazMarke() const {
         return marka;
     }
 
-    // Setter dla pola 'marka'
-    void PodajMarke(const string &marka) {
-        marka = marka;
+    // Setter dla pola marka
+    void PodajMarke(const string &ma) {
+        marka = ma;
     }
 
-    // Getter dla pola 'model'
+    // Getter dla pola model
     string PokazModel() const {
         return model;
     }
 
-    // Setter dla pola 'model'
-    void PodajModel(const string &model) {
-        model = model;
+    // Setter dla pola model
+    void PodajModel(const string &mo) {
+        model = mo;
     }
 
-    // Getter dla pola 'maxpredkosc'
+    // Getter dla pola maxpredkosc
     int PokazMaxPredkosc() const {
         return maxpredkosc;
     }
 
-    // Setter dla pola 'maxpredkosc' - sprawdza, czy wartość jest dodatnia
+    // Setter dla pola maxpredkosc - sprawdza czy wartość jest dodatnia
     void PodajMaxPredkosc(int predkosc) {
         if (predkosc > 0) {
             maxpredkosc = predkosc;
@@ -50,17 +50,17 @@ public:
         }
     }
 
-    // Funkcja wyświetlająca informacje o samochodzie
+    // Wyświetlenie informacji o samochodzie
     void PokazInfo() const {
         cout << "Marka: " << marka << "\nModel: " << model << "\nPrędkość maksymalna: " << maxpredkosc << " km/h" << endl;
     }
 };
 
 int main() {
-    // Tworzymy obiekt klasy Car
+    // Tworzenie obiektu klasy Samochod
     Samochod mojSamochod("Toyota", "Supra", 250);
 
-    // Wyświetlamy informacje o samochodzie
+    // Wyświetlanie informacji o samochodzie
     mojSamochod.PokazInfo();
 
     // Użycie settera, by zmienić markę i model samochodu
@@ -68,7 +68,7 @@ int main() {
     mojSamochod.PodajModel("GT-R");
     mojSamochod.PodajMaxPredkosc(300);
 
-    // Wyświetlamy zaktualizowane informacje o samochodzie
+    // Wyświetlanie zaktualizowanych informacji o samochodzie
     cout << "\nZaktualizowane informacje:" << endl;
     mojSamochod.PokazInfo();
 
